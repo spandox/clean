@@ -8,13 +8,17 @@
 # hlsearch on (H) or off (h):
 ~H
 # Last Search Pattern:
-~MSle0~/hostname\c
+~MSle0~/date\c
 
 # Command Line History (newest to oldest):
 :wq
+:r ../recipes/server.rb
+:q1
 :q!
 
 # Search String History (newest to oldest):
+?/date\c
+?/date\
 ?/hostname\c
 ?/hostname
 
@@ -25,44 +29,118 @@
 # Input Line History (newest to oldest):
 
 # Registers:
-""1	LINE	0
-	
+"1	LINE	0
+	"
 "2	LINE	0
-	'
+	<h2>hostname: #{node['hostname']}</h2>
 "3	LINE	0
-	IP:       #{node['ipaddress']}"
+	<h2>ipaddress: #{node['ipaddress']}</h2>
 "4	LINE	0
-	# This is an example te, replace it with your own test.
+	  content "<h1>Hello, world!</h1>
 "5	LINE	0
-	  # This is an example test, replace with your own test.
+	"
+	  mode '0644'
+	end
+	
+	service 'httpd' do
+	  action [:enable, :start]
+	end
 "6	LINE	0
-	# This is an example test, replace it with your own test.
+	file '/var/www/html/index.html' do
 "7	LINE	0
-	  # This is an example test, replace with your own test.
+	
 "8	LINE	0
-	  - name: ubuntu-16.04
+	package 'httpd'
 "9	LINE	0
-	  - name: ubuntu-16.04
-"-	CHAR	0
-	 
+	
+""-	CHAR	0
+	}
 
 # File marks:
-'0  7  11  ~/cookbooks/apache/metadata.rb
-'1  12  12  ~/cookbooks/apache/recipes/server.rb
-'2  1  0  cookbooks/workstation/recipes/setup.rb
-'3  14  2  ~/cookbooks/apache/recipes/server.rb
-'4  7  13  ~/cookbooks/workstation/metadata.rb
-'5  7  0  ~/cookbooks/workstation/recipes/setup.rb
-'6  13  29  ~/cookbooks/workstation/recipes/setup.rb
-'7  6  38  ~/cookbooks/workstation/recipes/setup.rb
-'8  5064  0  ~/ohai.json
-'9  30  0  ~/ohai.json
+'0  10  2  ~/cookbooks/apache/recipes/server.rb
+'1  3  36  ~/cookbooks/apache/templates/index.html.erb
+'2  4  0  ~/cookbooks/apache/templates/index.html.erb
+'3  11  0  ~/cookbooks/apache/recipes/server.rb
+'4  1  0  ~/ohai.json
+'5  7  11  ~/cookbooks/apache/metadata.rb
+'6  1  0  cookbooks/workstation/recipes/setup.rb
+'7  11  2  ~/cookbooks/apache/recipes/server.rb
+'8  7  13  ~/cookbooks/workstation/metadata.rb
+'9  7  0  ~/cookbooks/workstation/recipes/setup.rb
 
 # Jumplist (newest first):
+-'  10  2  ~/cookbooks/apache/recipes/server.rb
+-'  3  36  ~/cookbooks/apache/templates/index.html.erb
+-'  4  0  ~/cookbooks/apache/templates/index.html.erb
+-'  14  0  ~/cookbooks/apache/recipes/server.rb
+-'  11  0  ~/cookbooks/apache/recipes/server.rb
+-'  5  0  ~/cookbooks/apache/templates/index.html.erb
+-'  1  0  ~/cookbooks/apache/templates/index.html.erb
+-'  1  0  ~/ohai.json
+-'  5064  0  ~/ohai.json
+-'  2445  14  ~/ohai.json
+-'  2438  14  ~/ohai.json
+-'  2431  14  ~/ohai.json
+-'  2424  14  ~/ohai.json
+-'  2417  14  ~/ohai.json
+-'  2410  14  ~/ohai.json
+-'  2403  14  ~/ohai.json
+-'  2396  14  ~/ohai.json
+-'  2389  14  ~/ohai.json
+-'  2382  14  ~/ohai.json
+-'  2375  14  ~/ohai.json
+-'  2368  14  ~/ohai.json
+-'  2361  14  ~/ohai.json
+-'  2354  14  ~/ohai.json
+-'  2347  14  ~/ohai.json
+-'  2340  14  ~/ohai.json
+-'  2333  14  ~/ohai.json
+-'  2326  14  ~/ohai.json
+-'  2319  14  ~/ohai.json
+-'  2312  14  ~/ohai.json
+-'  2305  14  ~/ohai.json
+-'  2298  14  ~/ohai.json
+-'  2291  14  ~/ohai.json
+-'  2284  14  ~/ohai.json
+-'  2277  14  ~/ohai.json
+-'  2270  14  ~/ohai.json
+-'  2263  14  ~/ohai.json
+-'  2256  14  ~/ohai.json
+-'  2249  14  ~/ohai.json
+-'  2242  14  ~/ohai.json
+-'  2235  14  ~/ohai.json
+-'  2228  14  ~/ohai.json
+-'  2221  14  ~/ohai.json
+-'  2214  14  ~/ohai.json
+-'  2207  14  ~/ohai.json
+-'  2200  14  ~/ohai.json
+-'  2193  14  ~/ohai.json
+-'  2186  14  ~/ohai.json
+-'  2179  14  ~/ohai.json
+-'  2172  14  ~/ohai.json
+-'  2165  14  ~/ohai.json
+-'  2158  14  ~/ohai.json
+-'  2151  14  ~/ohai.json
+-'  2144  14  ~/ohai.json
+-'  2137  14  ~/ohai.json
+-'  2130  14  ~/ohai.json
+-'  2123  14  ~/ohai.json
+-'  2116  14  ~/ohai.json
+-'  2109  14  ~/ohai.json
+-'  2102  14  ~/ohai.json
+-'  2095  14  ~/ohai.json
+-'  2088  14  ~/ohai.json
+-'  2081  14  ~/ohai.json
+-'  2074  14  ~/ohai.json
+-'  2067  14  ~/ohai.json
+-'  2060  14  ~/ohai.json
+-'  2053  14  ~/ohai.json
+-'  2046  14  ~/ohai.json
+-'  2039  14  ~/ohai.json
+-'  38  12  ~/ohai.json
+-'  13  15  ~/ohai.json
 -'  7  11  ~/cookbooks/apache/metadata.rb
 -'  1  0  ~/cookbooks/apache/metadata.rb
--'  12  12  ~/cookbooks/apache/recipes/server.rb
--'  14  2  ~/cookbooks/apache/recipes/server.rb
 -'  1  0  cookbooks/workstation/recipes/setup.rb
 -'  1  0  ~/cookbooks/apache/recipes/server.rb
 -'  7  13  ~/cookbooks/workstation/metadata.rb
@@ -70,10 +148,8 @@
 -'  7  0  ~/cookbooks/workstation/recipes/setup.rb
 -'  13  0  ~/cookbooks/workstation/recipes/setup.rb
 -'  6  1  ~/cookbooks/workstation/recipes/setup.rb
--'  5064  0  ~/ohai.json
 -'  1  0  ~/cookbooks/workstation/recipes/setup.rb
 -'  30  0  ~/ohai.json
--'  1  0  ~/ohai.json
 -'  1  0  ~/.git-credentials
 -'  1  4  ~/.gitignore_global
 -'  20  2  ~/cookbooks/apache/test/smoke/default/default_test.rb
@@ -90,95 +166,46 @@
 -'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
 -'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
 -'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  16  19  ~/cookbooks/apache/.kitchen.yml
--'  1  0  ~/cookbooks/apache/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  22  18  ~/.bashrc
--'  1  0  ~/.bashrc
--'  16  19  ~/cookbooks/apache/.kitchen.yml
--'  1  0  ~/cookbooks/apache/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  16  19  ~/cookbooks/apache/.kitchen.yml
--'  1  0  ~/cookbooks/apache/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  22  18  ~/.bashrc
--'  1  0  ~/.bashrc
--'  16  19  ~/cookbooks/apache/.kitchen.yml
--'  1  0  ~/cookbooks/apache/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  16  19  ~/cookbooks/apache/.kitchen.yml
--'  1  0  ~/cookbooks/apache/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  22  18  ~/.bashrc
--'  1  0  ~/.bashrc
--'  16  19  ~/cookbooks/apache/.kitchen.yml
--'  1  0  ~/cookbooks/apache/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  16  19  ~/cookbooks/apache/.kitchen.yml
--'  1  0  ~/cookbooks/apache/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  22  18  ~/.bashrc
--'  1  0  ~/.bashrc
--'  16  19  ~/cookbooks/apache/.kitchen.yml
--'  1  0  ~/cookbooks/apache/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  16  19  ~/cookbooks/apache/.kitchen.yml
--'  1  0  ~/cookbooks/apache/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  22  18  ~/.bashrc
--'  1  0  ~/.bashrc
--'  16  19  ~/cookbooks/apache/.kitchen.yml
--'  1  0  ~/cookbooks/apache/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
 
 # History of marks within files (newest to oldest):
+
+> ~/cookbooks/apache/recipes/server.rb
+	"	10	2
+	^	10	25
+	.	10	24
+	+	11	33
+	+	11	31
+	+	11	30
+	+	11	39
+	+	11	39
+	+	11	0
+	+	11	0
+	+	11	12
+	+	11	12
+	+	14	0
+	+	9	8
+	+	11	0
+	+	10	24
+
+> ~/cookbooks/apache/templates/index.html.erb
+	"	3	36
+	^	4	40
+	.	3	36
+	+	2	0
+	+	3	41
+	+	4	39
+	+	5	0
+	+	3	19
+	+	4	34
+	+	3	36
+
+> ~/ohai.json
+	"	1	0
 
 > ~/cookbooks/apache/metadata.rb
 	"	7	11
 	.	7	11
 	+	7	11
-
-> ~/cookbooks/apache/recipes/server.rb
-	"	12	12
-	^	13	1
-	.	12	11
-	+	10	33
-	+	11	31
-	+	12	30
-	+	11	39
-	+	12	39
-	+	13	0
-	+	14	0
-	+	11	12
-	+	12	11
 
 > cookbooks/workstation/recipes/setup.rb
 	"	1	0
@@ -211,9 +238,6 @@
 	"	7	13
 	.	7	13
 	+	7	13
-
-> ~/ohai.json
-	"	5064	0
 
 > ~/.git-credentials
 	"	1	0
