@@ -9,6 +9,7 @@
 ~H
 # Command Line History (newest to oldest):
 :wq
+:q!
 
 # Search String History (newest to oldest):
 
@@ -19,19 +20,69 @@
 # Input Line History (newest to oldest):
 
 # Registers:
-""1	LINE	0
-	  - name: ubuntu-16.04
+"1	LINE	0
+	# This is an example test, replace it with your own test.
 "2	LINE	0
+	  # This is an example test, replace with your own test.
+"3	LINE	0
 	  - name: ubuntu-16.04
-"-	CHAR	0
-	vagrant
+"4	LINE	0
+	  - name: ubuntu-16.04
+""-	CHAR	0
+	p
 
 # File marks:
-'0  22  18  ~/.bashrc
-'1  16  19  ~/cookbooks/apache/.kitchen.yml
-'2  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
+'0  20  2  ~/cookbooks/workstation/test/smoke/default/default_test.rb
+'1  1  0  ~/cookbooks/workstation/test/smoke/default/default_test.rb
+'2  22  18  ~/.bashrc
+'3  16  19  ~/cookbooks/apache/.kitchen.yml
+'4  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
 
 # Jumplist (newest first):
+-'  20  2  ~/cookbooks/workstation/test/smoke/default/default_test.rb
+-'  1  0  ~/cookbooks/workstation/test/smoke/default/default_test.rb
+-'  22  18  ~/.bashrc
+-'  1  0  ~/.bashrc
+-'  16  19  ~/cookbooks/apache/.kitchen.yml
+-'  1  0  ~/cookbooks/apache/.kitchen.yml
+-'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  16  19  ~/cookbooks/apache/.kitchen.yml
+-'  1  0  ~/cookbooks/apache/.kitchen.yml
+-'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  22  18  ~/.bashrc
+-'  1  0  ~/.bashrc
+-'  16  19  ~/cookbooks/apache/.kitchen.yml
+-'  1  0  ~/cookbooks/apache/.kitchen.yml
+-'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  16  19  ~/cookbooks/apache/.kitchen.yml
+-'  1  0  ~/cookbooks/apache/.kitchen.yml
+-'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  22  18  ~/.bashrc
+-'  1  0  ~/.bashrc
+-'  16  19  ~/cookbooks/apache/.kitchen.yml
+-'  1  0  ~/cookbooks/apache/.kitchen.yml
+-'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  16  19  ~/cookbooks/apache/.kitchen.yml
+-'  1  0  ~/cookbooks/apache/.kitchen.yml
+-'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
+-'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
 -'  22  18  ~/.bashrc
 -'  1  0  ~/.bashrc
 -'  16  19  ~/cookbooks/apache/.kitchen.yml
@@ -48,6 +99,14 @@
 -'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
 
 # History of marks within files (newest to oldest):
+
+> ~/cookbooks/workstation/test/smoke/default/default_test.rb
+	"	20	2
+	^	20	3
+	.	20	2
+	+	9	23
+	+	14	17
+	+	20	2
 
 > ~/.bashrc
 	"	22	18
