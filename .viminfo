@@ -25,36 +25,46 @@
 # Input Line History (newest to oldest):
 
 # Registers:
-"1	LINE	0
-	IP:       #{node['ipaddress']}"
+""1	LINE	0
+	
 "2	LINE	0
-	# This is an example te, replace it with your own test.
+	'
 "3	LINE	0
-	  # This is an example test, replace with your own test.
+	IP:       #{node['ipaddress']}"
 "4	LINE	0
-	# This is an example test, replace it with your own test.
+	# This is an example te, replace it with your own test.
 "5	LINE	0
 	  # This is an example test, replace with your own test.
 "6	LINE	0
-	  - name: ubuntu-16.04
+	# This is an example test, replace it with your own test.
 "7	LINE	0
+	  # This is an example test, replace with your own test.
+"8	LINE	0
 	  - name: ubuntu-16.04
-""-	CHAR	0
+"9	LINE	0
+	  - name: ubuntu-16.04
+"-	CHAR	0
 	 
 
 # File marks:
-'0  7  13  ~/cookbooks/workstation/metadata.rb
-'1  7  0  ~/cookbooks/workstation/recipes/setup.rb
-'2  13  29  ~/cookbooks/workstation/recipes/setup.rb
-'3  6  38  ~/cookbooks/workstation/recipes/setup.rb
-'4  5064  0  ~/ohai.json
-'5  30  0  ~/ohai.json
-'6  1  0  ~/cookbooks/workstation/recipes/setup.rb
-'7  1  0  ~/.git-credentials
-'8  1  4  ~/.gitignore_global
-'9  20  2  ~/cookbooks/apache/test/smoke/default/default_test.rb
+'0  7  11  ~/cookbooks/apache/metadata.rb
+'1  12  12  ~/cookbooks/apache/recipes/server.rb
+'2  1  0  cookbooks/workstation/recipes/setup.rb
+'3  14  2  ~/cookbooks/apache/recipes/server.rb
+'4  7  13  ~/cookbooks/workstation/metadata.rb
+'5  7  0  ~/cookbooks/workstation/recipes/setup.rb
+'6  13  29  ~/cookbooks/workstation/recipes/setup.rb
+'7  6  38  ~/cookbooks/workstation/recipes/setup.rb
+'8  5064  0  ~/ohai.json
+'9  30  0  ~/ohai.json
 
 # Jumplist (newest first):
+-'  7  11  ~/cookbooks/apache/metadata.rb
+-'  1  0  ~/cookbooks/apache/metadata.rb
+-'  12  12  ~/cookbooks/apache/recipes/server.rb
+-'  14  2  ~/cookbooks/apache/recipes/server.rb
+-'  1  0  cookbooks/workstation/recipes/setup.rb
+-'  1  0  ~/cookbooks/apache/recipes/server.rb
 -'  7  13  ~/cookbooks/workstation/metadata.rb
 -'  1  0  ~/cookbooks/workstation/metadata.rb
 -'  7  0  ~/cookbooks/workstation/recipes/setup.rb
@@ -148,17 +158,30 @@
 -'  16  19  ~/cookbooks/apache/.kitchen.yml
 -'  1  0  ~/cookbooks/apache/.kitchen.yml
 -'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  16  19  ~/cookbooks/apache/.kitchen.yml
 
 # History of marks within files (newest to oldest):
 
-> ~/cookbooks/workstation/metadata.rb
-	"	7	13
-	.	7	13
-	+	7	13
+> ~/cookbooks/apache/metadata.rb
+	"	7	11
+	.	7	11
+	+	7	11
+
+> ~/cookbooks/apache/recipes/server.rb
+	"	12	12
+	^	13	1
+	.	12	11
+	+	10	33
+	+	11	31
+	+	12	30
+	+	11	39
+	+	12	39
+	+	13	0
+	+	14	0
+	+	11	12
+	+	12	11
+
+> cookbooks/workstation/recipes/setup.rb
+	"	1	0
 
 > ~/cookbooks/workstation/recipes/setup.rb
 	"	7	0
@@ -183,6 +206,11 @@
 	+	10	37
 	+	11	36
 	+	6	24
+
+> ~/cookbooks/workstation/metadata.rb
+	"	7	13
+	.	7	13
+	+	7	13
 
 > ~/ohai.json
 	"	5064	0
