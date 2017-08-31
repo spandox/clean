@@ -7,11 +7,16 @@
 
 # hlsearch on (H) or off (h):
 ~H
+# Last Search Pattern:
+~MSle0~/hostname\c
+
 # Command Line History (newest to oldest):
 :wq
 :q!
 
 # Search String History (newest to oldest):
+?/hostname\c
+?/hostname
 
 # Expression History (newest to oldest):
 
@@ -21,33 +26,44 @@
 
 # Registers:
 "1	LINE	0
-	# This is an example te, replace it with your own test.
+	IP:       #{node['ipaddress']}"
 "2	LINE	0
-	  # This is an example test, replace with your own test.
+	# This is an example te, replace it with your own test.
 "3	LINE	0
-	# This is an example test, replace it with your own test.
-"4	LINE	0
 	  # This is an example test, replace with your own test.
+"4	LINE	0
+	# This is an example test, replace it with your own test.
 "5	LINE	0
-	  - name: ubuntu-16.04
+	  # This is an example test, replace with your own test.
 "6	LINE	0
 	  - name: ubuntu-16.04
+"7	LINE	0
+	  - name: ubuntu-16.04
 ""-	CHAR	0
-	_
+	 
 
 # File marks:
-'0  1  0  ~/.git-credentials
-'1  1  4  ~/.gitignore_global
-'2  20  2  ~/cookbooks/apache/test/smoke/default/default_test.rb
-'3  23  40  ~/cookbooks/workstation/test/smoke/default/default_test.rb
-'4  1  0  cookbooks/workstation/test/smoke/default/default_test.rb
-'5  25  2  ~/cookbooks/workstation/test/smoke/default/default_test.rb
-'6  20  2  ~/cookbooks/workstation/test/smoke/default/default_test.rb
-'7  1  0  ~/cookbooks/workstation/test/smoke/default/default_test.rb
-'8  22  18  ~/.bashrc
-'9  16  19  ~/cookbooks/apache/.kitchen.yml
+'0  7  13  ~/cookbooks/workstation/metadata.rb
+'1  7  0  ~/cookbooks/workstation/recipes/setup.rb
+'2  13  29  ~/cookbooks/workstation/recipes/setup.rb
+'3  6  38  ~/cookbooks/workstation/recipes/setup.rb
+'4  5064  0  ~/ohai.json
+'5  30  0  ~/ohai.json
+'6  1  0  ~/cookbooks/workstation/recipes/setup.rb
+'7  1  0  ~/.git-credentials
+'8  1  4  ~/.gitignore_global
+'9  20  2  ~/cookbooks/apache/test/smoke/default/default_test.rb
 
 # Jumplist (newest first):
+-'  7  13  ~/cookbooks/workstation/metadata.rb
+-'  1  0  ~/cookbooks/workstation/metadata.rb
+-'  7  0  ~/cookbooks/workstation/recipes/setup.rb
+-'  13  0  ~/cookbooks/workstation/recipes/setup.rb
+-'  6  1  ~/cookbooks/workstation/recipes/setup.rb
+-'  5064  0  ~/ohai.json
+-'  1  0  ~/cookbooks/workstation/recipes/setup.rb
+-'  30  0  ~/ohai.json
+-'  1  0  ~/ohai.json
 -'  1  0  ~/.git-credentials
 -'  1  4  ~/.gitignore_global
 -'  20  2  ~/cookbooks/apache/test/smoke/default/default_test.rb
@@ -138,16 +154,40 @@
 -'  16  19  ~/cookbooks/apache/.kitchen.yml
 -'  1  0  ~/cookbooks/apache/.kitchen.yml
 -'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
--'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  22  18  ~/.bashrc
--'  1  0  ~/.bashrc
--'  16  19  ~/cookbooks/apache/.kitchen.yml
--'  1  0  ~/cookbooks/apache/.kitchen.yml
--'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
 
 # History of marks within files (newest to oldest):
+
+> ~/cookbooks/workstation/metadata.rb
+	"	7	13
+	.	7	13
+	+	7	13
+
+> ~/cookbooks/workstation/recipes/setup.rb
+	"	7	0
+	^	7	0
+	.	6	24
+	+	6	39
+	+	13	1
+	+	6	10
+	+	13	0
+	+	8	8
+	+	9	37
+	+	10	9
+	+	9	9
+	+	10	14
+	+	9	9
+	+	10	10
+	+	8	10
+	+	9	10
+	+	10	18
+	+	8	30
+	+	12	0
+	+	10	37
+	+	11	36
+	+	6	24
+
+> ~/ohai.json
+	"	5064	0
 
 > ~/.git-credentials
 	"	1	0
