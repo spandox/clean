@@ -3,3 +3,5 @@
 # Please adapt and uncomment the following lines:
 name = ChefDK User
 email = spandox@spandox.com
+[core]
+	excludesfile = /home/chef/.gitignore_global
