@@ -21,27 +21,34 @@
 
 # Registers:
 "1	LINE	0
-	# This is an example test, replace it with your own test.
+	# This is an example te, replace it with your own test.
 "2	LINE	0
 	  # This is an example test, replace with your own test.
 "3	LINE	0
-	  - name: ubuntu-16.04
+	# This is an example test, replace it with your own test.
 "4	LINE	0
+	  # This is an example test, replace with your own test.
+"5	LINE	0
+	  - name: ubuntu-16.04
+"6	LINE	0
 	  - name: ubuntu-16.04
 ""-	CHAR	0
-	p
+	_
 
 # File marks:
-'0  23  40  ~/cookbooks/workstation/test/smoke/default/default_test.rb
-'1  1  0  cookbooks/workstation/test/smoke/default/default_test.rb
-'2  25  2  ~/cookbooks/workstation/test/smoke/default/default_test.rb
-'3  20  2  ~/cookbooks/workstation/test/smoke/default/default_test.rb
-'4  1  0  ~/cookbooks/workstation/test/smoke/default/default_test.rb
-'5  22  18  ~/.bashrc
-'6  16  19  ~/cookbooks/apache/.kitchen.yml
-'7  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
+'0  20  2  ~/cookbooks/apache/test/smoke/default/default_test.rb
+'1  23  40  ~/cookbooks/workstation/test/smoke/default/default_test.rb
+'2  1  0  cookbooks/workstation/test/smoke/default/default_test.rb
+'3  25  2  ~/cookbooks/workstation/test/smoke/default/default_test.rb
+'4  20  2  ~/cookbooks/workstation/test/smoke/default/default_test.rb
+'5  1  0  ~/cookbooks/workstation/test/smoke/default/default_test.rb
+'6  22  18  ~/.bashrc
+'7  16  19  ~/cookbooks/apache/.kitchen.yml
+'8  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
 
 # Jumplist (newest first):
+-'  20  2  ~/cookbooks/apache/test/smoke/default/default_test.rb
+-'  1  0  ~/cookbooks/apache/test/smoke/default/default_test.rb
 -'  23  40  ~/cookbooks/workstation/test/smoke/default/default_test.rb
 -'  25  0  ~/cookbooks/workstation/test/smoke/default/default_test.rb
 -'  1  0  cookbooks/workstation/test/smoke/default/default_test.rb
@@ -139,9 +146,17 @@
 -'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
 -'  16  19  ~/clean/cookbooks/workstation/.kitchen.yml
 -'  1  0  ~/clean/cookbooks/workstation/.kitchen.yml
--'  16  19  ~/cookbooks/apache/.kitchen.yml
 
 # History of marks within files (newest to oldest):
+
+> ~/cookbooks/apache/test/smoke/default/default_test.rb
+	"	20	2
+	^	20	3
+	.	20	2
+	+	9	23
+	+	14	17
+	+	15	13
+	+	20	2
 
 > ~/cookbooks/workstation/test/smoke/default/default_test.rb
 	"	23	40
