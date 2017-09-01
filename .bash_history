@@ -241,3 +241,10 @@ hostname -l
 hostname -s
 hostname -I
 history |grep git
+ls -la
+cd chef-repo
+vim cookbooks/haproxy/templates/haproxy.cfg.erb
+vim cookbooks/haproxy/recipes/default.rb
+knife search node "*:*"
+knife search node "*:*" -a cloud.public_ipv4
+exit
