@@ -19,8 +19,10 @@ $
 # Command Line History (newest to oldest):
 :wq
 :q!
-:r web.rb
 :q
+:r production.rb
+:Wq
+:r web.rb
 :q1
 :w
 :%s/\#\{/<\%\= /
@@ -47,39 +49,58 @@ $
 "0	CHAR	0
 	m
 "1	LINE	0
-	run_list 'recipe[apache]'
+	
 "2	LINE	0
-	description 'Web Server'
+	cookbook 'apache', '= 0.3.2'
 "3	LINE	0
-	name 'web'
+	
 "4	LINE	0
 	
 "5	LINE	0
-	
+	description 'Where we run production code'
 "6	LINE	0
-	default_attribure
+	name 'production'
 "7	LINE	0
-	TODO: Enter the cookbook description here.
+	cookbook 'apache', '= 0.3.2'
+	override_attributes({
+	  'apache' => {
+	    'port' => 8181
+	    }
+	})
 "8	LINE	0
-	    server app1 172.31.29.13:80 weight 1 maxconn 100 check
+	run_list 'recipe[apache]'
 "9	LINE	0
-	
+	description 'Web Server'
 ""-	CHAR	0
-	 
+	'
 
 # File marks:
-'0  6  2  ~/chef-repo/roles/base.rb
-'1  3  0  ~/chef-repo/roles/web.rb
-'2  3  23  ~/chef-repo/roles/loadbalancer.rb
-'3  3  32  ~/chef-repo/roles/base.rb
-'4  21  0  ~/chef-repo/cookbooks/my_chef_client/metadata.rb
-'5  8  36  ~/chef-repo/cookbooks/my_chef_client/recipes/default.rb
-'6  4  0  ~/chef-repo/roles/loadbalancer.rb
-'7  1  9  ~/chef-repo/roles/web.rb
-'8  8  1  ~/chef-repo/roles/webserver.rb
-'9  46  4  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
+'0  7  13  ~/chef-repo/cookbooks/haproxy/metadata.rb
+'1  10  86  ~/chef-repo/cookbooks/haproxy/recipes/default.rb
+'2  3  0  ~/chef-repo/environments/acceptance.rb
+'3  3  0  ~/chef-repo/environments/acceptance.rb
+'4  4  26  ~/chef-repo/environments/production.rb
+'5  10  9  ~/chef-repo/environments/acceptance.rb
+'6  10  1  ~/chef-repo/environments/acceptance.rb
+'7  6  58  ~/chef-repo/cookbooks/apache/templates/index.html.erb
+'8  7  22  ~/chef-repo/cookbooks/apache/metadata.rb
+'9  10  0  ~/chef-repo/environments/production.rb
 
 # Jumplist (newest first):
+-'  7  13  ~/chef-repo/cookbooks/haproxy/metadata.rb
+-'  21  0  ~/chef-repo/cookbooks/haproxy/metadata.rb
+-'  10  86  ~/chef-repo/cookbooks/haproxy/recipes/default.rb
+-'  1  3  ~/chef-repo/cookbooks/haproxy/recipes/default.rb
+-'  17  2  ~/chef-repo/cookbooks/haproxy/recipes/default.rb
+-'  3  0  ~/chef-repo/environments/acceptance.rb
+-'  10  4  ~/chef-repo/environments/acceptance.rb
+-'  4  26  ~/chef-repo/environments/production.rb
+-'  10  0  ~/chef-repo/environments/production.rb
+-'  1  0  ~/chef-repo/environments/acceptance.rb
+-'  6  58  ~/chef-repo/cookbooks/apache/templates/index.html.erb
+-'  1  0  ~/chef-repo/cookbooks/apache/templates/index.html.erb
+-'  7  22  ~/chef-repo/cookbooks/apache/metadata.rb
+-'  1  0  ~/chef-repo/environments/production.rb
 -'  6  2  ~/chef-repo/roles/base.rb
 -'  3  0  ~/chef-repo/roles/base.rb
 -'  3  0  ~/chef-repo/roles/web.rb
@@ -103,19 +124,15 @@ $
 -'  26  2  ~/chef-repo/cookbooks/apache/recipes/server.rb
 -'  5  35  ~/chef-repo/cookbooks/haproxy/Berksfile
 -'  1  0  ~/chef-repo/cookbooks/haproxy/Berksfile
--'  21  0  ~/chef-repo/cookbooks/haproxy/metadata.rb
 -'  22  0  ~/chef-repo/cookbooks/haproxy/metadata.rb
 -'  9  27  ~/chef-repo/cookbooks/haproxy/metadata.rb
--'  7  0  ~/chef-repo/cookbooks/haproxy/metadata.rb
 -'  8  0  ~/chef-repo/cookbooks/haproxy/metadata.rb
 -'  27  0  ~/chef-repo/cookbooks/apache/templates/httpd.conf.erb
 -'  1  0  ~/chef-repo/cookbooks/apache/templates/httpd.conf.erb
 -'  1  0  ~/chef-repo/cookbooks/apache/recipes/server.rb
 -'  1  0  ~/chef-repo/cookbooks/apache
 -'  1  27  ~/chef-repo/cookbooks/apache/attributes/default.rb
--'  7  22  ~/chef-repo/cookbooks/apache/metadata.rb
 -'  1  0  ~/chef-repo/cookbooks/apache/metadata.rb
--'  17  2  ~/chef-repo/cookbooks/haproxy/recipes/default.rb
 -'  1  0  ~/chef-repo/cookbooks/haproxy/metadata.rb
 -'  3  13  ~/chef-repo/cookbooks/haproxy/README.md
 -'  1  0  ~/chef-repo/cookbooks/haproxy/README.md
@@ -123,7 +140,6 @@ $
 -'  1  0  ~/chef-repo/cookbooks/haproxy/templates
 -'  22  0  ~/chef-repo/cookbooks/haproxy/recipes/default.rb
 -'  1  0  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
--'  1  0  ~/chef-repo/cookbooks/haproxy/recipes/default.rb
 -'  31  0  ~/chef-repo/README.md
 -'  1  0  ~/chef-repo/README.md
 -'  7  13  ~/cookbooks/workstation/metadata.rb
@@ -167,19 +183,67 @@ $
 -'  2291  14  ~/ohai.json
 -'  2284  14  ~/ohai.json
 -'  2277  14  ~/ohai.json
--'  2270  14  ~/ohai.json
--'  2263  14  ~/ohai.json
--'  2256  14  ~/ohai.json
--'  2249  14  ~/ohai.json
--'  2242  14  ~/ohai.json
--'  2235  14  ~/ohai.json
--'  2228  14  ~/ohai.json
--'  2221  14  ~/ohai.json
--'  2214  14  ~/ohai.json
--'  2207  14  ~/ohai.json
--'  2200  14  ~/ohai.json
+-'  10  86  ~/chef-repo/cookbooks/haproxy/recipes/default.rb
 
 # History of marks within files (newest to oldest):
+
+> ~/chef-repo/cookbooks/haproxy/metadata.rb
+	"	7	13
+	^	9	28
+	.	7	13
+	+	2	13
+	+	3	36
+	+	7	11
+	+	22	0
+	+	9	27
+	+	15	0
+	+	21	0
+	+	9	26
+	+	7	13
+
+> ~/chef-repo/cookbooks/haproxy/recipes/default.rb
+	"	10	86
+	^	10	87
+	.	10	86
+	+	22	2
+	+	9	0
+	+	10	59
+	+	16	3
+	+	17	38
+	+	1	0
+	+	10	86
+
+> ~/chef-repo/environments/acceptance.rb
+	"	3	0
+	^	3	28
+	.	3	0
+	+	10	1
+	+	10	9
+	+	10	0
+	+	3	0
+	+	3	0
+	+	3	0
+	+	4	0
+	+	3	0
+
+> ~/chef-repo/environments/production.rb
+	"	4	26
+	^	10	0
+	.	4	26
+	+	9	2
+	+	4	26
+
+> ~/chef-repo/cookbooks/apache/templates/index.html.erb
+	"	6	58
+	^	6	59
+	.	6	58
+	+	6	58
+
+> ~/chef-repo/cookbooks/apache/metadata.rb
+	"	7	22
+	^	7	23
+	.	7	22
+	+	7	22
 
 > ~/chef-repo/roles/base.rb
 	"	6	2
@@ -263,18 +327,6 @@ $
 	.	5	35
 	+	5	35
 
-> ~/chef-repo/cookbooks/haproxy/metadata.rb
-	"	21	0
-	^	9	28
-	.	21	0
-	+	2	13
-	+	3	36
-	+	7	11
-	+	22	0
-	+	9	27
-	+	15	0
-	+	21	0
-
 > ~/chef-repo/cookbooks/apache/templates/httpd.conf.erb
 	"	27	0
 	^	27	36
@@ -287,22 +339,6 @@ $
 	.	1	27
 	+	1	27
 
-> ~/chef-repo/cookbooks/apache/metadata.rb
-	"	7	22
-	^	7	23
-	.	7	22
-	+	7	22
-
-> ~/chef-repo/cookbooks/haproxy/recipes/default.rb
-	"	17	2
-	^	17	39
-	.	17	38
-	+	22	2
-	+	9	0
-	+	10	59
-	+	16	3
-	+	17	38
-
 > ~/chef-repo/cookbooks/haproxy/README.md
 	"	3	13
 	^	3	14
@@ -313,52 +349,6 @@ $
 	"	31	0
 
 > ~/cookbooks/workstation/metadata.rb
-	"	7	13
-	.	7	13
-	+	7	13
-
-> ~/cookbooks/workstation/templates/motd.erb
-	"	6	37
-	^	6	42
-	.	6	37
-	+	1	0
-	+	3	34
-	+	4	34
-	+	5	40
-	+	6	41
-	+	7	0
-	+	6	37
-
-> ~/cookbooks/workstation/recipes/setup.rb
-	"	2	1
-	^	2	2
-	.	2	1
-	+	6	39
-	+	7	1
-	+	6	10
-	+	7	0
-	+	7	8
-	+	7	37
-	+	7	9
-	+	7	9
-	+	7	14
-	+	7	9
-	+	7	10
-	+	7	10
-	+	7	10
-	+	7	18
-	+	7	30
-	+	7	0
-	+	7	37
-	+	7	36
-	+	6	24
-	+	5	8
-	+	6	17
-	+	7	0
-	+	6	1
-	+	2	1
-
-> ~/cookbooks/apache/metadata.rb
 	"	7	13
 	.	7	13
 	+	7	13
