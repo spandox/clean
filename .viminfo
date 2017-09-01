@@ -18,9 +18,9 @@ $
 
 # Command Line History (newest to oldest):
 :wq
+:q!
 :r web.rb
 :q
-:q!
 :q1
 :w
 :%s/\#\{/<\%\= /
@@ -68,25 +68,29 @@ $
 	 
 
 # File marks:
-'0  21  0  ~/chef-repo/cookbooks/my_chef_client/metadata.rb
-'1  8  36  ~/chef-repo/cookbooks/my_chef_client/recipes/default.rb
-'2  4  0  ~/chef-repo/roles/loadbalancer.rb
-'3  1  9  ~/chef-repo/roles/web.rb
-'4  8  1  ~/chef-repo/roles/webserver.rb
-'5  46  4  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
-'6  3  24  ~/chef-repo/roles/webserver.rb
-'7  3  25  ~/chef-repo/roles/loadbalancer.rb
-'8  37  0  ~/chef-repo/cookbooks/apache/recipes/server.rb
-'9  24  30  ~/chef-repo/cookbooks/apache/recipes/server.rb
+'0  6  2  ~/chef-repo/roles/base.rb
+'1  3  0  ~/chef-repo/roles/web.rb
+'2  3  23  ~/chef-repo/roles/loadbalancer.rb
+'3  3  32  ~/chef-repo/roles/base.rb
+'4  21  0  ~/chef-repo/cookbooks/my_chef_client/metadata.rb
+'5  8  36  ~/chef-repo/cookbooks/my_chef_client/recipes/default.rb
+'6  4  0  ~/chef-repo/roles/loadbalancer.rb
+'7  1  9  ~/chef-repo/roles/web.rb
+'8  8  1  ~/chef-repo/roles/webserver.rb
+'9  46  4  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
 
 # Jumplist (newest first):
+-'  6  2  ~/chef-repo/roles/base.rb
+-'  3  0  ~/chef-repo/roles/base.rb
+-'  3  0  ~/chef-repo/roles/web.rb
+-'  1  0  ~/chef-repo/roles/web.rb
+-'  3  23  ~/chef-repo/roles/loadbalancer.rb
+-'  4  0  ~/chef-repo/roles/loadbalancer.rb
+-'  1  0  ~/chef-repo/roles/base.rb
 -'  21  0  ~/chef-repo/cookbooks/my_chef_client/metadata.rb
 -'  1  0  ~/chef-repo/cookbooks/my_chef_client/metadata.rb
 -'  8  36  ~/chef-repo/cookbooks/my_chef_client/recipes/default.rb
 -'  1  0  ~/chef-repo/cookbooks/my_chef_client/recipes/default.rb
--'  4  0  ~/chef-repo/roles/loadbalancer.rb
--'  3  0  ~/chef-repo/roles/loadbalancer.rb
--'  1  9  ~/chef-repo/roles/web.rb
 -'  8  1  ~/chef-repo/roles/webserver.rb
 -'  3  0  ~/chef-repo/roles/webserver.rb
 -'  46  4  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
@@ -174,13 +178,33 @@ $
 -'  2214  14  ~/ohai.json
 -'  2207  14  ~/ohai.json
 -'  2200  14  ~/ohai.json
--'  2193  14  ~/ohai.json
--'  2186  14  ~/ohai.json
--'  2179  14  ~/ohai.json
--'  2172  14  ~/ohai.json
--'  2165  14  ~/ohai.json
 
 # History of marks within files (newest to oldest):
+
+> ~/chef-repo/roles/base.rb
+	"	6	2
+	^	8	2
+	.	8	1
+	+	3	33
+	+	8	1
+
+> ~/chef-repo/roles/web.rb
+	"	3	0
+	^	3	23
+	.	3	22
+	+	1	9
+	+	3	22
+
+> ~/chef-repo/roles/loadbalancer.rb
+	"	3	23
+	^	3	24
+	.	3	23
+	+	3	26
+	+	9	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	3	23
 
 > ~/chef-repo/cookbooks/my_chef_client/metadata.rb
 	"	21	0
@@ -195,20 +219,6 @@ $
 	^	8	37
 	.	8	36
 	+	8	36
-
-> ~/chef-repo/roles/loadbalancer.rb
-	"	4	0
-	.	4	0
-	+	3	26
-	+	9	0
-	+	4	0
-	+	4	0
-	+	4	0
-
-> ~/chef-repo/roles/web.rb
-	"	1	9
-	.	1	9
-	+	1	9
 
 > ~/chef-repo/roles/webserver.rb
 	"	8	1
@@ -352,21 +362,3 @@ $
 	"	7	13
 	.	7	13
 	+	7	13
-
-> ~/cookbooks/apache/recipes/server.rb
-	"	10	2
-	^	10	25
-	.	10	24
-	+	11	33
-	+	11	31
-	+	11	30
-	+	11	39
-	+	11	39
-	+	11	0
-	+	11	0
-	+	11	12
-	+	11	12
-	+	14	0
-	+	9	8
-	+	11	0
-	+	10	24
