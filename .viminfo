@@ -17,13 +17,13 @@
 $<\%\= 
 
 # Command Line History (newest to oldest):
+:q!
 :wq
 :%s/\#\{/<\%\= /
 :%s/\#\{/<%= /
 :r recipes/setup.rb
 :r ../recipes/server.rb
 :q1
-:q!
 
 # Search String History (newest to oldest):
 ? \#\{
@@ -62,18 +62,20 @@ $<\%\=
 	]
 
 # File marks:
-'0  7  13  ~/cookbooks/workstation/metadata.rb
-'1  6  37  ~/cookbooks/workstation/templates/motd.erb
-'2  2  1  ~/cookbooks/workstation/recipes/setup.rb
-'3  7  13  ~/cookbooks/apache/metadata.rb
-'4  10  2  ~/cookbooks/apache/recipes/server.rb
-'5  3  36  ~/cookbooks/apache/templates/index.html.erb
-'6  4  0  ~/cookbooks/apache/templates/index.html.erb
-'7  11  0  ~/cookbooks/apache/recipes/server.rb
-'8  1  0  ~/ohai.json
-'9  1  0  cookbooks/workstation/recipes/setup.rb
+'0  31  0  ~/chef-repo/README.md
+'1  7  13  ~/cookbooks/workstation/metadata.rb
+'2  6  37  ~/cookbooks/workstation/templates/motd.erb
+'3  2  1  ~/cookbooks/workstation/recipes/setup.rb
+'4  7  13  ~/cookbooks/apache/metadata.rb
+'5  10  2  ~/cookbooks/apache/recipes/server.rb
+'6  3  36  ~/cookbooks/apache/templates/index.html.erb
+'7  4  0  ~/cookbooks/apache/templates/index.html.erb
+'8  11  0  ~/cookbooks/apache/recipes/server.rb
+'9  1  0  ~/ohai.json
 
 # Jumplist (newest first):
+-'  31  0  ~/chef-repo/README.md
+-'  1  0  ~/chef-repo/README.md
 -'  7  13  ~/cookbooks/workstation/metadata.rb
 -'  6  37  ~/cookbooks/workstation/templates/motd.erb
 -'  2  1  ~/cookbooks/workstation/recipes/setup.rb
@@ -170,9 +172,11 @@ $<\%\=
 -'  22  18  ~/.bashrc
 -'  1  0  ~/.bashrc
 -'  16  19  ~/cookbooks/apache/.kitchen.yml
--'  1  0  ~/cookbooks/apache/.kitchen.yml
 
 # History of marks within files (newest to oldest):
+
+> ~/chef-repo/README.md
+	"	31	0
 
 > ~/cookbooks/workstation/metadata.rb
 	"	7	13
