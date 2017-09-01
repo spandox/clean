@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~H
 # Last Search Pattern:
-~MSle0~/\#\{
+~MSle0~/Listen
 
 # Last Substitute Search Pattern:
 ~MSle0&\#\{
@@ -17,17 +17,19 @@
 $
 
 # Command Line History (newest to oldest):
-:q
 :wq
 :q!
+:q
+:q1
 :w
 :%s/\#\{/<\%\= /
 :%s/\#\{/<%= /
 :r recipes/setup.rb
 :r ../recipes/server.rb
-:q1
 
 # Search String History (newest to oldest):
+?/Listen
+?/listen
 ? \#\{
 ?/date\c
 ?/date\
@@ -41,15 +43,8 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	node2:
-	  cloud.local_ipv4: 
-	
-	node1:
-	  cloud.local_ipv4: 
-	
-	
-	 
+"0	CHAR	0
+	m
 "1	LINE	0
 	TODO: Enter the cookbook description here.
 "2	LINE	0
@@ -76,25 +71,41 @@ $
 "9	LINE	0
 	CPU      : #{node['cpu']['0']['mhz']}
 ""-	CHAR	0
-	m
+	 
 
 # File marks:
-'0  17  2  ~/chef-repo/cookbooks/haproxy/recipes/default.rb
-'1  46  8  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
-'2  45  31  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
-'3  8  36  ~/chef-repo/cookbooks/haproxy/metadata.rb
-'4  3  13  ~/chef-repo/cookbooks/haproxy/README.md
-'5  1  0  ~/chef-repo/cookbooks/haproxy/templates
-'6  47  4  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
-'7  47  0  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
-'8  1  0  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
-'9  22  2  ~/chef-repo/cookbooks/haproxy/recipes/default.rb
+'0  24  30  ~/chef-repo/cookbooks/apache/recipes/server.rb
+'1  11  2  ~/chef-repo/cookbooks/apache/recipes/server.rb
+'2  5  35  ~/chef-repo/cookbooks/haproxy/Berksfile
+'3  21  0  ~/chef-repo/cookbooks/haproxy/metadata.rb
+'4  22  0  ~/chef-repo/cookbooks/haproxy/metadata.rb
+'5  45  96  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
+'6  7  11  ~/chef-repo/cookbooks/haproxy/metadata.rb
+'7  27  0  ~/chef-repo/cookbooks/apache/templates/httpd.conf.erb
+'8  26  2  ~/chef-repo/cookbooks/apache/recipes/server.rb
+'9  1  0  ~/chef-repo/cookbooks/apache
 
 # Jumplist (newest first):
+-'  24  30  ~/chef-repo/cookbooks/apache/recipes/server.rb
+-'  11  0  ~/chef-repo/cookbooks/apache/recipes/server.rb
+-'  26  2  ~/chef-repo/cookbooks/apache/recipes/server.rb
+-'  5  35  ~/chef-repo/cookbooks/haproxy/Berksfile
+-'  1  0  ~/chef-repo/cookbooks/haproxy/Berksfile
+-'  21  0  ~/chef-repo/cookbooks/haproxy/metadata.rb
+-'  22  0  ~/chef-repo/cookbooks/haproxy/metadata.rb
+-'  9  27  ~/chef-repo/cookbooks/haproxy/metadata.rb
+-'  7  0  ~/chef-repo/cookbooks/haproxy/metadata.rb
+-'  45  96  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
+-'  46  4  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
+-'  8  0  ~/chef-repo/cookbooks/haproxy/metadata.rb
+-'  27  0  ~/chef-repo/cookbooks/apache/templates/httpd.conf.erb
+-'  1  0  ~/chef-repo/cookbooks/apache/templates/httpd.conf.erb
+-'  1  0  ~/chef-repo/cookbooks/apache/recipes/server.rb
+-'  1  0  ~/chef-repo/cookbooks/apache
+-'  1  27  ~/chef-repo/cookbooks/apache/attributes/default.rb
+-'  7  22  ~/chef-repo/cookbooks/apache/metadata.rb
+-'  1  0  ~/chef-repo/cookbooks/apache/metadata.rb
 -'  17  2  ~/chef-repo/cookbooks/haproxy/recipes/default.rb
--'  46  8  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
--'  45  8  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
--'  8  36  ~/chef-repo/cookbooks/haproxy/metadata.rb
 -'  1  0  ~/chef-repo/cookbooks/haproxy/metadata.rb
 -'  3  13  ~/chef-repo/cookbooks/haproxy/README.md
 -'  1  0  ~/chef-repo/cookbooks/haproxy/README.md
@@ -173,38 +184,39 @@ $
 -'  2102  14  ~/ohai.json
 -'  2095  14  ~/ohai.json
 -'  2088  14  ~/ohai.json
--'  2081  14  ~/ohai.json
--'  2074  14  ~/ohai.json
--'  2067  14  ~/ohai.json
--'  2060  14  ~/ohai.json
--'  2053  14  ~/ohai.json
--'  2046  14  ~/ohai.json
--'  2039  14  ~/ohai.json
--'  38  12  ~/ohai.json
--'  13  15  ~/ohai.json
--'  1  0  ~/cookbooks/apache/metadata.rb
--'  1  0  cookbooks/workstation/recipes/setup.rb
--'  1  0  ~/cookbooks/apache/recipes/server.rb
--'  1  0  ~/cookbooks/workstation/metadata.rb
--'  6  1  ~/cookbooks/workstation/recipes/setup.rb
--'  46  8  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
 
 # History of marks within files (newest to oldest):
 
-> ~/chef-repo/cookbooks/haproxy/recipes/default.rb
-	"	17	2
-	^	17	39
-	.	17	38
-	+	22	2
-	+	9	0
-	+	10	59
-	+	16	3
-	+	17	38
+> ~/chef-repo/cookbooks/apache/recipes/server.rb
+	"	24	30
+	^	24	31
+	.	24	30
+	+	24	39
+	+	28	2
+	+	24	30
+
+> ~/chef-repo/cookbooks/haproxy/Berksfile
+	"	5	35
+	^	5	36
+	.	5	35
+	+	5	35
+
+> ~/chef-repo/cookbooks/haproxy/metadata.rb
+	"	21	0
+	^	9	28
+	.	21	0
+	+	2	13
+	+	3	36
+	+	7	11
+	+	22	0
+	+	9	27
+	+	15	0
+	+	21	0
 
 > ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
-	"	46	8
-	^	45	32
-	.	45	31
+	"	45	96
+	^	45	96
+	.	45	96
 	+	47	0
 	+	47	0
 	+	45	14
@@ -221,14 +233,35 @@ $
 	+	45	61
 	+	47	0
 	+	46	13
-	+	45	31
+	+	45	96
 
-> ~/chef-repo/cookbooks/haproxy/metadata.rb
-	"	8	36
-	^	3	37
-	.	3	36
-	+	2	13
-	+	3	36
+> ~/chef-repo/cookbooks/apache/templates/httpd.conf.erb
+	"	27	0
+	^	27	36
+	.	27	35
+	+	27	35
+
+> ~/chef-repo/cookbooks/apache/attributes/default.rb
+	"	1	27
+	^	1	28
+	.	1	27
+	+	1	27
+
+> ~/chef-repo/cookbooks/apache/metadata.rb
+	"	7	22
+	^	7	23
+	.	7	22
+	+	7	22
+
+> ~/chef-repo/cookbooks/haproxy/recipes/default.rb
+	"	17	2
+	^	17	39
+	.	17	38
+	+	22	2
+	+	9	0
+	+	10	59
+	+	16	3
+	+	17	38
 
 > ~/chef-repo/cookbooks/haproxy/README.md
 	"	3	13
@@ -334,39 +367,3 @@ $
 	^	1	5
 	.	1	4
 	+	1	4
-
-> ~/cookbooks/apache/test/smoke/default/default_test.rb
-	"	20	2
-	^	20	3
-	.	20	2
-	+	9	23
-	+	14	17
-	+	15	13
-	+	20	2
-
-> ~/cookbooks/workstation/test/smoke/default/default_test.rb
-	"	23	40
-	^	23	41
-	.	23	40
-	+	9	23
-	+	14	17
-	+	20	3
-	+	22	29
-	+	25	2
-	+	23	40
-
-> cookbooks/workstation/test/smoke/default/default_test.rb
-	"	1	0
-
-> ~/.bashrc
-	"	22	18
-	^	22	19
-	.	22	0
-	+	22	0
-
-> ~/cookbooks/apache/.kitchen.yml
-	"	16	19
-	^	3	14
-	.	16	19
-	+	3	13
-	+	16	19
