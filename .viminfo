@@ -8,17 +8,19 @@
 # hlsearch on (H) or off (h):
 ~H
 # Last Search Pattern:
-~MSle0/date\c
+~MSle0~/\#\{
 
 # Last Substitute Search Pattern:
-~MSle0~&\#\{
+~MSle0&\#\{
 
 # Last Substitute String:
-$<\%\= 
+$
 
 # Command Line History (newest to oldest):
-:q!
 :wq
+:q!
+:q
+:w
 :%s/\#\{/<\%\= /
 :%s/\#\{/<%= /
 :r recipes/setup.rb
@@ -39,41 +41,67 @@ $<\%\=
 # Input Line History (newest to oldest):
 
 # Registers:
+"0	LINE	0
+	node2:
+	  cloud.local_ipv4: 
+	
+	node1:
+	  cloud.local_ipv4: 
+	
+	
+	 
 "1	LINE	0
-	
+	TODO: Enter the cookbook description here.
 "2	LINE	0
-	"
+	    server app1 172.31.29.13:80 weight 1 maxconn 100 check
 "3	LINE	0
-	CPU      : #{node['cpu']['0']['mhz']}
-"4	LINE	0
-	MEMORY   : #{node['memory']['total']}
-"5	LINE	0
-	HOSTNAME : #{node['hostname']}
-"6	LINE	0
-	IPADDRESS: #{node['ipaddress']}
-"7	LINE	0
-	"
-	end
-"8	LINE	0
 	
+"4	LINE	0
+	node2:
+	  cloud.local_ipv4: 
+	
+	node1:
+	  cloud.local_ipv4: 
+	
+	
+	 
+"5	LINE	0
+	
+"6	LINE	0
+	 
+"7	LINE	0
+	
+"8	LINE	0
+	"
 "9	LINE	0
-	file '/etc/motd' do
+	CPU      : #{node['cpu']['0']['mhz']}
 ""-	CHAR	0
-	]
+	m
 
 # File marks:
-'0  31  0  ~/chef-repo/README.md
-'1  7  13  ~/cookbooks/workstation/metadata.rb
-'2  6  37  ~/cookbooks/workstation/templates/motd.erb
-'3  2  1  ~/cookbooks/workstation/recipes/setup.rb
-'4  7  13  ~/cookbooks/apache/metadata.rb
-'5  10  2  ~/cookbooks/apache/recipes/server.rb
-'6  3  36  ~/cookbooks/apache/templates/index.html.erb
-'7  4  0  ~/cookbooks/apache/templates/index.html.erb
-'8  11  0  ~/cookbooks/apache/recipes/server.rb
-'9  1  0  ~/ohai.json
+'0  8  36  ~/chef-repo/cookbooks/haproxy/metadata.rb
+'1  3  13  ~/chef-repo/cookbooks/haproxy/README.md
+'2  45  7  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
+'3  1  0  ~/chef-repo/cookbooks/haproxy/templates
+'4  17  2  ~/chef-repo/cookbooks/haproxy/recipes/default.rb
+'5  47  4  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
+'6  47  0  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
+'7  1  0  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
+'8  22  2  ~/chef-repo/cookbooks/haproxy/recipes/default.rb
+'9  31  0  ~/chef-repo/README.md
 
 # Jumplist (newest first):
+-'  8  36  ~/chef-repo/cookbooks/haproxy/metadata.rb
+-'  1  0  ~/chef-repo/cookbooks/haproxy/metadata.rb
+-'  3  13  ~/chef-repo/cookbooks/haproxy/README.md
+-'  1  0  ~/chef-repo/cookbooks/haproxy/README.md
+-'  45  7  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
+-'  47  4  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
+-'  1  0  ~/chef-repo/cookbooks/haproxy/templates
+-'  17  2  ~/chef-repo/cookbooks/haproxy/recipes/default.rb
+-'  22  0  ~/chef-repo/cookbooks/haproxy/recipes/default.rb
+-'  1  0  ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
+-'  1  0  ~/chef-repo/cookbooks/haproxy/recipes/default.rb
 -'  31  0  ~/chef-repo/README.md
 -'  1  0  ~/chef-repo/README.md
 -'  7  13  ~/cookbooks/workstation/metadata.rb
@@ -162,18 +190,53 @@ $<\%\=
 -'  30  0  ~/ohai.json
 -'  1  0  ~/.git-credentials
 -'  1  4  ~/.gitignore_global
--'  20  2  ~/cookbooks/apache/test/smoke/default/default_test.rb
--'  1  0  ~/cookbooks/apache/test/smoke/default/default_test.rb
--'  23  40  ~/cookbooks/workstation/test/smoke/default/default_test.rb
--'  25  0  ~/cookbooks/workstation/test/smoke/default/default_test.rb
--'  1  0  cookbooks/workstation/test/smoke/default/default_test.rb
--'  20  0  ~/cookbooks/workstation/test/smoke/default/default_test.rb
--'  1  0  ~/cookbooks/workstation/test/smoke/default/default_test.rb
--'  22  18  ~/.bashrc
--'  1  0  ~/.bashrc
--'  16  19  ~/cookbooks/apache/.kitchen.yml
 
 # History of marks within files (newest to oldest):
+
+> ~/chef-repo/cookbooks/haproxy/metadata.rb
+	"	8	36
+	^	3	37
+	.	3	36
+	+	2	13
+	+	3	36
+
+> ~/chef-repo/cookbooks/haproxy/README.md
+	"	3	13
+	^	3	14
+	.	3	13
+	+	3	13
+
+> ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb
+	"	45	7
+	^	45	8
+	.	45	7
+	+	47	0
+	+	47	0
+	+	45	14
+	+	47	60
+	+	47	32
+	+	45	0
+	+	47	19
+	+	45	16
+	+	47	16
+	+	47	19
+	+	47	16
+	+	47	0
+	+	44	50
+	+	45	61
+	+	47	0
+	+	46	13
+	+	45	7
+
+> ~/chef-repo/cookbooks/haproxy/recipes/default.rb
+	"	17	2
+	^	17	39
+	.	17	38
+	+	22	2
+	+	9	0
+	+	10	59
+	+	16	3
+	+	17	38
 
 > ~/chef-repo/README.md
 	"	31	0
@@ -308,11 +371,4 @@ $<\%\=
 	^	3	14
 	.	16	19
 	+	3	13
-	+	16	19
-
-> ~/clean/cookbooks/workstation/.kitchen.yml
-	"	16	19
-	^	3	14
-	.	16	19
-	+	3	14
 	+	16	19
