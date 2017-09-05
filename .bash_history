@@ -248,3 +248,436 @@ vim cookbooks/haproxy/recipes/default.rb
 knife search node "*:*"
 knife search node "*:*" -a cloud.public_ipv4
 exit
+dir
+unzip chef-starter.zip 
+sudo yum install zip
+unzip chef-starter.zip 
+sudo yum install unzip
+unzip chef-starter.zip 
+dir
+vim chef-repo/README.md 
+tree
+cd
+git clone https://github.com/chef-training/chef-essentials-repo
+dir
+cd chef-essentials-repo/
+dir
+cd ..
+cd chef-repo/
+dir
+mv cookbooks cookbooks.bak
+cp -r ../chef-essentials-repo/cookbooks .
+cd
+cd chef-repo/
+dir
+cd cookbooks
+dir
+cd ..
+cd cookbooks.bak/
+dir
+cd ..
+dir
+cd ..
+gitcommit starter kit
+cd chef-repo/
+knife client list
+knife cookbook list
+berks --help
+cd cookbooks/apache/
+berks install
+ls -la
+cat Berksfile.lock 
+berks upload
+knife cookbook list
+cd ../workstation/
+berks install
+berks upload
+knife cookbook list
+knife node list
+knife bootstrap ec2-52-203-119-245.compute-1.amazonaws.com -x chef -P 'Cod3Can!' --sudo -N node1
+knife node list
+knife node show node1
+cd ..
+knife node run_list add node1 "recipe[apache]"
+knife node show node1
+knife bootstap ec2-54-91-71-43.compute-1.amazonaws.com -x chef -P 'Cod3Can!' -N node2 -r 'recipe[apache]'
+knife bootstrap ec2-54-91-71-43.compute-1.amazonaws.com -x chef -P 'Cod3Can!' -N node2 -r 'recipe[apache]'
+knife bootstrap ec2-54-91-71-43.compute-1.amazonaws.com -x chef -P 'Cod3Can!' -N--sudo  node2 -r 'recipe[apache]'
+knife bootstrap ec2-54-91-71-43.compute-1.amazonaws.com -x chef -P 'Cod3Can!' --sudo -N  node2 -r 'recipe[apache]'
+knife search node hostname
+knife search node 'hostname:*'
+knife search node 'node:*'
+knife search node '*.*'
+knife search node '*.*' -a ipaddress
+knife search node '*.*'
+knife search node 'hostname:*'
+knife search node '*:*'
+knife search node '*:*' -a ipaddress
+chef generate cookbook cookbooks/haproxy
+cd cookbooks
+dir
+cd haproxy/
+dir
+cd recipes/default.rb 
+vim recipes/default.rb 
+ruby -c recipes/default.rb
+foodcritic recipes/default.rb
+chef --help
+chef generate template --help
+cat recipes/default.rb 
+chef generate template . haproxy.cfg
+vim templates/haproxy.cfg.erb 
+cat > templates/haproxy.cfg.erb 
+vim templates/haproxy.cfg.erb 
+wget https://gist.githubusercontent.com/johnfitzpatrick/d2c4b92b919231e4b82c/raw/3717729ef95c87f5913229c223d826b0c9c8e672/haproxy.cfg
+cat > templates/haproxy.cfg.erb 
+vim templates/haproxy.cfg.erb 
+curl https://gist.githubusercontent.com/johnfitzpatrick/d2c4b92b919231e4b82c/raw/3717729ef95c87f5913229c223d826b0c9c8e672/haproxy.cfg
+curl https://gist.githubusercontent.com/johnfitzpatrick/d2c4b92b919231e4b82c/raw/3717729ef95c87f5913229c223d826b0c9c8e672/haproxy.cfg > ~/chef-repo/cookbooks/haproxy/templates/haproxy.cfg.erb 
+vim templates/haproxy.cfg.erb 
+foodcritic recipes/default.rb 
+knife search node 'recipes:apache::default'
+knife search node 'recipes:apache\:\:default'
+knife search node 'recipes:apache\:\:default' -a cloud
+knife search node 'recipes:apache\:\:default' -a 'cloud::local_ipv4'
+knife search node 'recipes:apache\:\:default' -a 'cloud.local_ipv4'
+vi templates/haproxy.cfg.erb 
+fg
+vi recipes/default.rb 
+ruby -c recipes/default.rb 
+foodcritic recipes/default.rb 
+vi recipes/default.rb 
+cat templates/haproxy.cfg.erb 
+vim templates/
+fg
+vim templates/haproxy.cfg.erb 
+ruby -c recipes/default.rb 
+foodcritic recipes/default.rb 
+foodcritic templates/haproxy.cfg.erb 
+dir
+vim README.md 
+vim metadata.rb 
+gitcommit haproxy
+berks init
+berks install
+berks upload
+gitcommit hamore
+hostory |grep boot
+history |grep boot
+knife bootstrap ec2-54-89-92-32.compute-1.amazonaws.com -x check -P 'Cod3Can!' --sudo -N node3 -r 'recipe[haproxy]'
+knife bootstrap ec2-54-89-92-32.compute-1.amazonaws.com -x chef -P 'Cod3Can!' --sudo -N node3 -r 'recipe[haproxy]'
+vim templates/haproxy.cfg.erb 
+berks upload
+berks upload --force
+knife bootstrap ec2-54-89-92-32.compute-1.amazonaws.com -x chef -P 'Cod3Can!' --sudo -N node3 -r 'recipe[haproxy]'
+cd ..
+cd apache
+dir
+dir templates/
+gitcommit after lunch
+dir
+chef generate --help
+chef generate attibute --help
+chef generate attibute 
+vim metadata.rb 
+chef generate attibute . default
+cd ..
+chef generate attibute cookbooks/apache default
+chef generate attribute cookbooks/apache default
+cd cookbooks/apache/attributes/
+vim default.rb 
+vim ..
+cd ..
+vim recipes/server.rb 
+foodcritic recipes/server.rb 
+cd ..
+cd apache/
+cd templates/
+chef generate template .. httpd.conf
+dir
+cat httpd.conf.erb 
+curl https://gist.githubusercontent.com/johnfitzpatrick/38a8599db71fe6a0ea3e/raw/ad0ff877c465f6c1d45b983f1cefde986d3a5599/httpd.conf.erb > ~/chef-repo/cookbooks/apache/templates/httpd.conf.erb 
+vim httpd.conf.erb 
+cd ..
+berks install
+berks upload
+knife show cooksbooks
+knife show 
+knife list cookbooks
+history |grep show
+history |
+knife cookbook list
+cd ..
+cd haproxy/
+vim metadata.rb 
+vim templates/haproxy.cfg.erb 
+berks upload
+knife cookbooks list
+vim metadata.rb 
+foodcritic .
+vim metadata.rb 
+foodcritic .
+vim metadata.rb 
+berks upload
+berks init
+berks upload
+berks install
+dir
+vim Berksfile
+berks upload
+berks install
+berks upload
+cd ..
+dir
+cd apache/
+dir
+cd recipes/
+dir
+vim server.rb 
+knife ssh "*:*" -x chef -P 'Cod3Can!' "sudo chef-client"
+cd
+cd chef-repo/cookbooks/apache/recipes/
+vim server.rb 
+cd ..
+cd  apache/
+berks upload
+berks upload --force
+cd ..
+cd haproxy/
+berks upload --force
+knife ssh "*:*" -x chef -P 'Cod3Can!' "sudo chef-client"
+gitcommit working
+cat5 recipes/default.rb 
+cat recipes/default.rb 
+cd ..
+vim apache/recipes/server.rb 
+cd ..
+cd roles/
+vim loadbalancer.rb
+vim webserver.rb
+cd ..
+knife role
+knife role list
+knife role from file loadbalancer.rb
+knife role from file webserver.rb
+knife role list
+knife role loadbalancer show
+knife role list loadbalancer
+knife role show loadbalancer
+knife node run_list set node3 "role[loadbalncer]"
+knife node show
+knife node show "*:*"
+knife ssh "role:loadbalncer" -x chef -P 'Cod3Can!' "sudo chef-client"
+knife node run_list set node3 "role[loadbalancer]"
+knife ssh "role:loadbalncer" -x chef -P 'Cod3Can!' "sudo chef-client"
+knife ssh "role:loadbalancer" -x chef -P 'Cod3Can!' "sudo chef-client"
+vim cookbooks/haproxy/templates/haproxy.cfg.erb 
+gitcommit test
+cd roles/
+dir
+vim webserver.rb 
+history |grep role
+knife role from file webserver.rb
+mv webserver.rb web.rb
+vim web.rb 
+knife role from file web.rb
+knife role list
+knife role --help
+knife role delete webserver
+knife role list
+knife show web
+knife role show web
+knife node run_list set node1 "role[web]"
+knife node run_list set node2 "role[web]"
+knife ssh "*.*" -x chef -P 'Cod3Can!' "sudo chef-client"
+cd ..
+cd chef-repo/
+cd roles/
+vim loadbalancer.rb 
+history
+knife role from file web.rb
+knife role from file loadbalancer.rb 
+cd ..
+knife ssh "*.*" -x chef -P 'Cod3Can!' "sudo chef-client"
+kife ssh "*:*" -x chef -P 'Cod3Can!' "ls -F /etc/chef"
+knife ssh "*:*" -x chef -P 'Cod3Can!' "ls -F /etc/chef"
+knife ssh "*:*" -x chef -P 'Cod3Can!' "cat /etc/chef/client.rb"
+chef generate cookbook cookbooks/my_chef_client
+vi cookbooks/my_chef_client/recipes/default.rb 
+foodcritic cookbooks/my_chef_client
+vim cookbooks/my_chef_client/metadata.rb 
+foodcritic cookbooks/my_chef_client
+gitcommit wrapper
+cd cookbooks/my_chef_client/
+berks install
+cat Berksfile.lock 
+ls -lt ~/.berkshelf/cookbooks/
+berks upload
+knife cookbook list
+cd ..
+cd roles/
+dir
+vim base.rb
+history |grep from
+knife role from file base.rb 
+knife roles show
+knife role show
+knife show role
+knife show role base
+kife --help
+knife --help
+vim loadbalancer.rb 
+vi web.rb 
+knife role from file loadbalancer.rb 
+knife role from file web.rb 
+vi web.rb 
+cd ..
+dir cookbooks
+cat roles/base.rb 
+history |grep list
+knife role list
+history |grep ssh
+knife ssh "*.*" -x chef -P 'Cod3Can!' "sudo chef-client"
+history |grep ssh
+knife ssh "*.*" -x chef -P 'Cod3Can!' "ps aux |grep ruby"
+knife ssh "*.*" -x chef -P 'Cod3Can!' "ps au -U root |grep ruby"
+man ps 
+knife ssh "*.*" -x chef -P 'Cod3Can!' "ps au -U root |grep ruby"
+ps au -U root
+ps  -U root
+knife ssh "*.*" -x chef -P 'Cod3Can!' "ps -U root |grep ruby"
+knife ssh "*.*" -x chef -P 'Cod3Can!' "ps -aU root |grep ruby"
+knife ssh "*.*" -x chef -P 'Cod3Can!' "ps -uU root |grep ruby"
+knife ssh "*.*" -x chef -P 'Cod3Can!' "ps uU root |grep ruby"
+vim roles/base.rb 
+knife role from file base.rb 
+knife ssh "*.*" -x chef -P 'Cod3Can!' "sudo chef-client"
+knife ssh "*.*" -x chef -P 'Cod3Can!' "ps uU root |grep chef-client"
+gitcommit environments
+history |grep bootstrap
+knife searcg node "*:*"
+knife search node "*:*"
+chef generate --help
+mkdir environments
+cd environments/
+dir
+pwd
+vim production.rb
+kinfe --help
+knife --help
+kife enviroment from file production.rb 
+knife enviroment from file production.rb 
+knife environment from file production.rb 
+knife environment show production
+knife environment list
+knife node environment set node1 production
+knife node show node1
+knife node environment set node2 production
+knife node environment set node3 production
+knife node show "*:*"
+knife node show
+knife search node "*:*"
+knife ssh "*.*" -x chef -P 'Cod3Can!' "sudo chef-client"
+hgreo
+hgrep
+history |grep bootst
+cd ..
+cd cookbooks/apache/
+vim metadata.rb 
+cdim templates/index.html.erb 
+vim templates/index.html.erb 
+berks install
+berks upload
+cd ..
+cd environments/
+vim acceptance.rb
+knife role from file acceptance.rb 
+vim acceptance.rb
+vim production.rb 
+vim acceptance.rb 
+knife role from file acceptance.rb 
+vim acceptance.rb 
+knife role from file acceptance.rb 
+knife role from file acceptance.rb  -VV
+cat acceptance.rb 
+vim acceptance.rb 
+cd ..
+knife role from file acceptance.rb  -VV
+knife role from file environments/acceptance.rb  -VV
+vim environments/acceptance.rb 
+knife role from file environments/acceptance.rb  -VV
+cd environments/
+knife role from file acceptance.rb  -VV
+vim -b acceptance.rb 
+knife role from file acceptance.rb  -VV
+vim -b acceptance.rb 
+knife role from file acceptance.rb  -VV
+knife environment from file acceptance.rb  -VV
+knife enviroment list
+knife enviroment list |grep enviroment
+knife enviroment --help |grep enviroment
+knife environment list
+Updated Environment acceptance
+history |grep boot
+knife bootstrap ec2-34-230-23-141.compute-1.amazonaws.com -x chef -x 'Cod3Can!' --sudo -N node4 -r 'rode[wed]' -E acceptance
+knife bootstrap ec2-34-230-23-141.compute-1.amazonaws.com -x chef -x 'Cod3Can!' --sudo -N node4 -r 'role[wed]' -E acceptance
+knife bootstrap ec2-34-230-23-141.compute-1.amazonaws.com -x chef -P 'Cod3Can!' --sudo -N node4 -r 'role[wed]' -E acceptance
+knife bootstrap ec2-34-230-23-141.compute-1.amazonaws.com -x chef -P 'Cod3Can!' --sudo -N node4 -r 'role[web]' -E acceptance
+knife node show node4
+knife ssh "role:loadbalancer" -x chef -P 'Cod3Can!' "sudo chef-client"
+dir
+cat production.rb 
+knife environment from file production.rb 
+knife show nodes
+knife show node
+knife show nodes "*:*"
+knife show 
+knife --help
+knife show node node1
+knife show node node2
+knife node show node1
+knife node show node2
+knife node show node3
+knife node show node4
+knife ssh "*:*" -x chef -P 'Cod3Can!' "sudo chef-client"
+knife node show node2
+knife node show node1
+history |grep run-list
+history |grep run
+knife node run_list set node1 "role[web]"
+knife node run_list set node2 "role[web]"
+knife node show node1
+knife node show node2
+knife node --help
+knife node run_list set node1 "recipe[apache]"
+knife node run_list set node1 "role[web]"
+cd
+vim chef-repo/cookbooks/haproxy/recipes/default.rb 
+cd chef-repo/cookbooksha
+cd chef-repo/cookbooks/haproxy/
+foodcritic 
+foodcritic .
+foodcritic recipes/default.rb 
+vi metadata.rb 
+knife node show node1
+knife node show node2
+berks install
+berks upload
+knife ssh "*:*" -x chef -P 'Cod3Can!' "sudo chef-client"
+knife node show node1
+knife node show node2
+"Roles" is different
+1
+echo "it has Roles" and the other doesn't
+cd
+gitcommit end
+knife node show node2
+history |grep boot
+knife bootstrap ec2-54-91-71-43.compute-1.amazonaws.com -x chef -P 'Cod3Can!' --sudo -N  node2 -r 'role[web]' -E production
+dir /etc/chef
+cd
+dir
+unzip chef-starter.zip 
+cd chef-repo/
+knife bootstrap ec2-54-91-71-43.compute-1.amazonaws.com -x chef -P 'Cod3Can!' --sudo -N  node2 -r 'role[web]' -E production
+gitcommit 'done!'
